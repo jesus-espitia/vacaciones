@@ -8,6 +8,17 @@ app = Flask(__name__)
 
 app.secret_key = 'secret_key'
 
+def conexion_bd():
+    global mysql, cursor
+    mysql = mysql.connector.connect (
+        host = 'localhost',
+        user = 'root',
+        database = 'ConcreteJungle_prueba'
+    )
+    cursor = mysql.cursor()
+
+
+
 @app.route('/')
 def index():
     return render_template('index.html')

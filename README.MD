@@ -12,5 +12,8 @@
 - [Logo (importante).]()
 - [Base de datos(importante).]()
 - [Prototipos de app.]()
+---
 
+## IDEAS:
+1. para el logo se podria hacer o incorporparar un pero dee perfil o viendo de frente junto con el nombre del proyecto.
 
