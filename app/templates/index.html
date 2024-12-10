@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,46 @@
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/config/footer.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/config/header.css')}}">
 </head>
+
 <body>
-    
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+    <header class="cabezaDePagina" id="cabezaDePagina">
+        <div class="contenedorHeader">
+            <div class="logoHeader">
+                <p>Concrete Jungle</p>
+            </div>
+            <nav class="registresLogin">
+                <a href="#">REGISTRO</a>
+                <a href="#">INICIO</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="contenedorDeBienvenida" id="contenedorDeBienvenida">
+            <div class="imagenAnimal">
+                <img src="{{url_for('static', filename = 'img/perro_inicio.png')}}" width="49%">
+            </div>
+            <div class="tituloTexto">
+                <div class="titulos">
+                    <h1 class="titulo">
+                        Bienvenido a tu pagina animal: Concrete Jungle
+                    </h1>
+                    <p>¡El lugar donde la ciudad y el cuidado animal se unen! Aquí encontrarás todo lo que necesitas para que tu mascota reciba la atención adecuada. Agenda citas fácilmente, accede a información útil y conecta con profesionales apasionados por el bienestar de los animales.
+                        ¡Porque en Concrete Jungle, cada mascota tiene su lugar en esta jungla urbana!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <footer class="pieDePagina" id="pieDePagina">
 
+    </footer>
     <script src="{{url_for('static', filename = 'js/script.js')}}"></script>
     <script src="{{url_for('static',filename = 'js/config/general.js')}}"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/config/footer.js')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/config/header.js')}}">
+    <script src="{{url_for('static',filename = 'js/config/footer.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/config/header.js')}}"></script>
 </body>
+
 </html>

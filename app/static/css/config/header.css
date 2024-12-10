@@ -1,0 +1,43 @@
+.contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0096c7;
+    color: #fff;
+    height: 60px;
+    box-shadow: -3px 6px 18px 0px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
+}
+
+.contenedorHeader a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.logoHeader p {
+    font-size: 190%;
+}
+
+.registresLogin a {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+}
+
+.registresLogin a:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.registresLogin a:active {
+    transform: translate(0em, 0.2em);
+}
