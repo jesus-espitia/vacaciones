@@ -1,6 +1,6 @@
 import flask_login
 from flask import Flask, url_for, redirect, request, render_template, session, jsonify, flash
-# from routes import Direciones_de_ruta
+from routes import login, register
 import mysql.connector
 import hashlib
 
@@ -23,9 +23,13 @@ def conexion_bd():
 def index():
     return render_template('index.html')
 
+@app.route('/login')
+def login_Ruta():
+    return login.login()
 
-
-
+@app.route('/register')
+def register_ruta():
+    return register.register()
 
 
 if __name__ == '__main__':
