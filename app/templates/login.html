@@ -16,8 +16,28 @@
         {% extends 'principal.html' %}
 
         {% block principal %}
-        <h2>Bienvenido a la página de inicio</h2>
-        <p>Este es el contenido principal de la página de inicio.</p>
+        <div class="punto">
+            <div class="form-container">
+                <p class="title">Login</p>
+                <form class="form">
+                    <div class="input-group">
+                        <label for="name">Nombre</label>
+                        <input placeholder="username" id="username" name="username" type="text" />
+                        <label for="Password">Contraseña</label>
+                        <input placeholder="password" id="Password" name="password" type="password" />
+                    </div>
+                    <div class="enviar">
+                        <a href="#" style="margin-top:6%;" class="sign">Enviar</a>
+                    </div>
+                    
+                </form>
+                <div class="social-message">
+                    <a href="/register">¿Aun no tienes cuenta? Registrate...</a>
+                </div>
+            </div>
+        </div>
+
+
 
         {% endblock %}
     </div>
