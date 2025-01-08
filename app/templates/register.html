@@ -4,23 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/registres.css')}}">
-    <title>{% block titulo %} Registro | CONCRETE JUNGLE{% endblock %}</title>
+    <title>{% block titulo %} Registro | CONCRETE JUNGLE {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/register.css')}}">
 </head>
 
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
     </style>
-    {% extends 'principal.html' %}
-
-    {% block principal %}
     <div class="contenidoRegistro" id="contenidoRegistro">
-        <h2>Bienvenido a la página de inicio</h2>
-        <p>Este es el contenido principal de la página de inicio.</p>
+        {% extends 'principal.html' %}
+
+        {% block principal %}
+        <div class="punto">
+            <div class="form-container">
+                <p class="title">Registro</p>
+                <form class="form" method="POST" action="/register">
+                    
+                    <div class="input-group">
+                        <label for="nombres">Nombres</label>
+                        <input placeholder="Nombres" id="nombres" name="nombres" type="text" required />
+
+                        <label for="apellidos">Apellidos</label>
+                        <input placeholder="Apellidos" id="apellidos" name="apellidos" type="text" required />
+
+                        <label for="documento">Número de documento</label>
+                        <input placeholder="Número de documento" id="documento" name="documento" type="text" required />
+
+                        <label for="correo">Correo</label>
+                        <input placeholder="Correo" id="correo" name="correo" type="email" required />
+
+                        <label for="password">Contraseña</label>
+                        <input placeholder="Contraseña" id="password" name="password" type="password" required />
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <label for="nombreMascota">Nombre de la mascota</label>
+                        <input placeholder="Nombre de la mascota" id="nombreMascota" name="nombreMascota" type="text"
+                            required />
+
+                        <label for="tipoMascota">Tipo de mascota</label>
+                        <select id="tipoMascota" name="tipoMascota" required>
+                            <option value="">Selecciona el tipo</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                        </select>
+
+                        <label for="dniMascota">Documento de la mascota</label>
+                        <input placeholder="DNI de la mascota" id="dniMascota" name="dniMascota" type="text" required />
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <label for="otraMascota">¿Tienes otra mascota?</label>
+                        <select id="otraMascota" name="otraMascota" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+
+                        <label for="tipoMascota2">Tipo de mascota</label>
+                        <select id="tipoMascota2" name="tipoMascota2">
+                            <option value="">Selecciona el tipo</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                        </select>
+
+                        <label for="dniMascota2">Documento de la mascota</label>
+                        <input placeholder="DNI de la mascota" id="dniMascota2" name="dniMascota2" type="text" />
+                    </div>
+
+                    <div class="enviar">
+                        <a href="#" type="submit" class="sign">Registrar</a>
+                    </div>
+                </form>
+                <div class="social-message">
+                    <a href="/login">¿Ya tienes cuenta? Inicia sesión...</a>
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
     </div>
 
-    {% endblock %}
 </body>
 
 </html>
