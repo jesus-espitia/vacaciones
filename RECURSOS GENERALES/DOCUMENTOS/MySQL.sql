@@ -1,7 +1,4 @@
--- Crear base de datos
-CREATE DATABASE ConcreteJungle_prueba;
-
-USE ConcreteJungle_prueba;
+-- Active: 1738881322720@@127.0.0.1@3306@concrete_jungle
 
 -- Tabla para dueños de mascotas
 CREATE TABLE Dueño (
