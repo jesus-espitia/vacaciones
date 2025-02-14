@@ -13,7 +13,7 @@ def conexion_bd():
     mysql = mysql.connector.connect (
         host = 'localhost',
         user = 'root',
-        database = 'ConcreteJungle_prueba'
+        database = 'concrete_jungle'
     )
     cursor = mysql.cursor()
 
@@ -33,9 +33,10 @@ def login_Ruta():
     return login.login()
 
 #==============================================================================================================
-@app.route('/register')
+@app.route('/register', methods=['GET','POST'])
 def register_ruta():
     return register.register()
+
 
 #==============================================================================================================
 if __name__ == '__main__':
